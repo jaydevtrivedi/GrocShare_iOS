@@ -1,0 +1,81 @@
+trigger:
+- main
+
+variables:
+  schemeName: 'HikeAppTest'
+
+pool:
+#  name: Macbook_New
+  name: MacBook_Old
+  demands:
+#    - agent.name -equals Macbook_Pro
+    - agent.name -equals macbookpro-2015 
+
+steps:
+- script: |
+    echo '----------------------------------------'
+    echo 'Selecting Xcode...'
+    sudo xcode-select --switch /Applications/Xcode.app
+    echo 'Xcode Version:'
+    xcodebuild -version
+    echo '----------------------------------------'
+  displayName: 'Select Xcode Version'
+
+- script: |
+    echo '----------------------------------------'
+    echo 'Resolving Package Dependencies...'
+    xcodebuild -resolvePackageDependencies -scheme $(schemeName)
+    echo 'Dependencies resolved.'
+    echo '----------------------------------------'
+  displayName: 'Resolve Package Dependencies'
+
+- script: |
+    echo '----------------------------------------'
+    echo 'Building the project...'
+    xcodebuild build \
+               -scheme $(schemeName) \
+               -sdk iphoneos \
+               -configuration Release \
+               -allowProvisioningUpdates \
+               CODE_SIGN_IDENTITY="" \
+               CODE_SIGNING_REQUIRED=NO \
+               CODE_SIGN_ENTITLEMENTS="" \
+               CODE_SIGNING_ALLOWED="NO"
+    echo 'Build completed.'
+    echo '----------------------------------------'
+  displayName: 'Build'
+
+- script: |
+    echo '----------------------------------------'
+    echo 'Building and testing the project...'
+    xcodebuild build test \
+               -scheme $(schemeName) \
+               -sdk iphoneos \
+               -configuration Release \
+               -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.4' \
+               -allowProvisioningUpdates \
+               CODE_SIGN_IDENTITY="" \
+               CODE_SIGNING_REQUIRED=NO \
+               CODE_SIGN_ENTITLEMENTS="" \
+               CODE_SIGNING_ALLOWED="NO"
+    echo 'Tests completed.'
+    echo '----------------------------------------'
+  displayName: 'Build and Test'
+
+
+# - script: |
+#     echo '----------------------------------------'
+#     echo 'Packaging the app...'
+#     xcodebuild -exportArchive \
+#                -archivePath $(Build.ArtifactStagingDirectory)/SwiftUIDevopsTest.xcarchive \
+#                -exportPath $(Build.ArtifactStagingDirectory)/SwiftUIDevopsTest.ipa \
+#                -exportOptionsPlist $(Build.SourcesDirectory)/ExportOptions.plist
+#     echo 'App packaged.'
+#     echo '----------------------------------------'
+#   displayName: 'Package App'
+
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     pathToPublish: '$(Build.ArtifactStagingDirectory)/SwiftUIDevopsTest.ipa'
+#     artifactName: 'SwiftUIDevopsTest'
+
