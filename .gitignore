@@ -73,3 +73,4 @@ Temporary Items
 *.DS_Store
 *.xcscheme
 *.xcscheme
+/Grocshare.xcodeproj/xcshareddata
