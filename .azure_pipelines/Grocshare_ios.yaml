@@ -1,5 +1,7 @@
 trigger:
-- main
+  branches:
+    include:
+    - '*'
 
 variables:
   schemeName: 'HikeAppTest'
