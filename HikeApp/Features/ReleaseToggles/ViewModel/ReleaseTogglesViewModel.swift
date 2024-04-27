@@ -16,7 +16,7 @@ class ReleaseTogglesViewModel: ObservableObject {
         self.releaseTogglesService = releaseTogglesService
     }
     
-    func fetchUsers() {
+    func getReleaseToggles() {
         releaseTogglesService.getReleaseToggles { [weak self] releaseToggles in
             DispatchQueue.main.async {
                 self?.releaseToggles = releaseToggles

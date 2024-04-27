@@ -26,6 +26,7 @@
 		75A73F972BA53D9B009DFEC6 /* ReleaseTogglesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A73F952BA53D9B009DFEC6 /* ReleaseTogglesView.swift */; };
 		75A73F992BA98CE9009DFEC6 /* ReleaseTogglesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A73F982BA98CE9009DFEC6 /* ReleaseTogglesModel.swift */; };
 		75A73F9A2BA98CE9009DFEC6 /* ReleaseTogglesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A73F982BA98CE9009DFEC6 /* ReleaseTogglesModel.swift */; };
+		75A73FAA2BB0FFC9009DFEC6 /* ReleaseTogglesViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A73FA92BB0FFC9009DFEC6 /* ReleaseTogglesViewUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		75A73F922BA53D1A009DFEC6 /* ReleaseTogglesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTogglesService.swift; sourceTree = "<group>"; };
 		75A73F952BA53D9B009DFEC6 /* ReleaseTogglesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTogglesView.swift; sourceTree = "<group>"; };
 		75A73F982BA98CE9009DFEC6 /* ReleaseTogglesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTogglesModel.swift; sourceTree = "<group>"; };
+		75A73FA92BB0FFC9009DFEC6 /* ReleaseTogglesViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseTogglesViewUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		757A84DF2B9E822D00ABE46E /* HikeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				75A73FA32BAF98F9009DFEC6 /* Features */,
 				757A84E02B9E822D00ABE46E /* HikeAppTests.swift */,
 			);
 			path = HikeAppTests;
@@ -142,6 +145,7 @@
 		757A84E92B9E822E00ABE46E /* HikeAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				75A73F9D2BAF960D009DFEC6 /* Features */,
 				757A84EA2B9E822E00ABE46E /* HikeAppUITests.swift */,
 				757A84EC2B9E822E00ABE46E /* HikeAppUITestsLaunchTests.swift */,
 			);
@@ -261,6 +265,37 @@
 				75A73F8F2BA53CE6009DFEC6 /* ReleaseTogglesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75A73F9D2BAF960D009DFEC6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				75A73F9E2BAF961F009DFEC6 /* ReleaseTogglesTests */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		75A73F9E2BAF961F009DFEC6 /* ReleaseTogglesTests */ = {
+			isa = PBXGroup;
+			children = (
+				75A73FA92BB0FFC9009DFEC6 /* ReleaseTogglesViewUITests.swift */,
+			);
+			path = ReleaseTogglesTests;
+			sourceTree = "<group>";
+		};
+		75A73FA32BAF98F9009DFEC6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				75A73FA42BAF9902009DFEC6 /* ReleaseToggles */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		75A73FA42BAF9902009DFEC6 /* ReleaseToggles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReleaseToggles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +459,7 @@
 			files = (
 				757A84EB2B9E822E00ABE46E /* HikeAppUITests.swift in Sources */,
 				757A84ED2B9E822E00ABE46E /* HikeAppUITestsLaunchTests.swift in Sources */,
+				75A73FAA2BB0FFC9009DFEC6 /* ReleaseTogglesViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
