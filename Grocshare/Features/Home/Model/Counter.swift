@@ -1,6 +1,6 @@
 //
 //  Counter.swift
-//  HikeApp
+//  Grocshare
 //
 //  Created by Jaydev Trivedi on 12/3/2024.
 //

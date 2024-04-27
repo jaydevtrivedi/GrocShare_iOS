@@ -1,6 +1,6 @@
 //
 //  ReleaseTogglesView.swift
-//  HikeApp
+//  Grocshare
 //
 //  Created by Jaydev Trivedi on 16/3/2024.
 //
