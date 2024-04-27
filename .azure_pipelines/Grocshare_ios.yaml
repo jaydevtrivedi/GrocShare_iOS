@@ -4,7 +4,7 @@ trigger:
     - '*'
 
 variables:
-  schemeName: 'HikeAppTest'
+  schemeName: 'GrocshareTest'
 
 pool:
 #  name: Macbook_New
