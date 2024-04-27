@@ -12,7 +12,7 @@ struct HikeAppApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            UserListView()
+            ReleaseTogglesView()
         }
     }
 }

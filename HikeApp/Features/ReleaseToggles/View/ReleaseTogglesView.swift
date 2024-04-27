@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserListView: View {
+struct ReleaseTogglesView: View {
     @ObservedObject var viewModel = ReleaseTogglesViewModel()
     
     var body: some View {
@@ -23,11 +23,11 @@ struct UserListView: View {
             }
         }
         .onAppear {
-            viewModel.fetchUsers()
+            viewModel.getReleaseToggles()
         }
     }
 }
 
 #Preview {
-    UserListView()
+    ReleaseTogglesView()
 }
