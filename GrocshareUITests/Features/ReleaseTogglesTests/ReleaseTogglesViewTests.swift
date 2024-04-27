@@ -1,11 +1,11 @@
 //
 //  ReleaseTogglesViewTests.swift
-//  HikeAppUITests
+//  GrocshareUITests
 //
 //  Created by Jaydev Trivedi on 25/3/2024.
 //
 
-@testable import HikeApp
+@testable import Grocshare
 import SwiftUI
 import XCTest
 

@@ -1,13 +1,13 @@
 //
-//  HikeAppUITestsLaunchTests.swift
-//  HikeAppUITests
+//  GrocshareUITestsLaunchTests.swift
+//  GrocshareUITests
 //
 //  Created by Jaydev Trivedi on 11/3/2024.
 //
 
 import XCTest
 
-final class HikeAppUITestsLaunchTests: XCTestCase {
+final class GrocshareUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,11 +1,11 @@
 //
 //  ReleaseTogglesViewModelTests.swift
-//  HikeAppTests
+//  GrocshareTests
 //
 //  Created by Jaydev Trivedi on 25/3/2024.
 //
 
-@testable import HikeApp
+@testable import Grocshare
 import XCTest
 
 class ReleaseTogglesViewModelTests: XCTestCase {

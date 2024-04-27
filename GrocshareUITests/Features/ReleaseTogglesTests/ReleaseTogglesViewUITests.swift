@@ -1,6 +1,6 @@
 //
 //  ReleaseTogglesViewUITests.swift
-//  HikeAppUITests
+//  GrocshareUITests
 //
 //  Created by Jaydev Trivedi on 25/3/2024.
 //
